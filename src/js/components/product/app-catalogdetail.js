@@ -18,11 +18,16 @@ var CatalogDetail = React.createClass({
   mixins:[StoreWatchMixin(getCatalogItem)],
   render:function(){
     return (
-        <div>
+        <div className="product-detail">
           <h2>{this.state.item.title}</h2>
           <img src={this.state.item.img} alt="" />
+          <p className="price">{this.state.item.currency} {this.state.item.cost}
+              <span className="text-success">{this.state.item.inCart && ' ( ' + this.state.item.qty + ' in cart )'}</span>
+          </p>
+          <div className="bs-callout bs-callout-warning">
+          <h4>{this.state.item.title} details : </h4>
           <p>{this.state.item.description}</p>
-          <p>${this.state.item.cost} <span className="text-success">{this.state.item.inCart && '(' + this.state.item.qty + ' in cart)'}</span></p>
+          </div>
           <div className="btn-group btn-group-sm">
           <AddToCart item={this.state.item} />
           <Link href='/' className="btn btn-default">Continue Shopping</Link>

@@ -7,6 +7,7 @@ var Template = require('./app-template.js');
 var Locations = Router.Locations;
 var Location  = Router.Location;
 var CCarousel = require('./Carousel/carousal');
+var Checkout = require('./checkout/checkout');
 
 var App = React.createClass({
   render:function(){
@@ -16,7 +17,8 @@ var App = React.createClass({
             <Locations>
               <Location path="/" handler={Catalog} />
               <Location path="/cart" handler={Cart} />
-              <Location path="/item/:item" handler={CatalogDetail} />
+              <Location path="/items/:item" handler={CatalogDetail} />
+              <Location path="/checkout" handler={Checkout} />
             </Locations>
           </Template>
         </div>

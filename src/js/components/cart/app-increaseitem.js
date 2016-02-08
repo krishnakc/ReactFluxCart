@@ -6,7 +6,7 @@ var IncreaseItem = React.createClass({
     AppActions.increaseItem(this.props.index)
   },
   render:function(){
-    return <button onClick={this.handler}>+</button>
+    return <button onClick={this.handler}><img className="inc-dec" src="../../assets/products/plus.png" /></button>
   }
 });
 

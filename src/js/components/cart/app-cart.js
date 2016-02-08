@@ -21,13 +21,13 @@ var Cart = React.createClass({
           <tr key={i}>
             <td><RemoveFromCart index={i} /></td>
             <td><img className="img-responsive" src={item.img} /></td>
-            <td>{item.title}</td>
+            <td><h4>{item.title}</h4></td>
             <td>{item.qty}</td>
             <td>
-              <Increase index={i} />
               <Decrease index={i} />
+              <Increase index={i} />
             </td>
-            <td>GBP {subtotal}</td>
+            <td><h5>GBP {subtotal}</h5></td>
           </tr>
       );
     })
@@ -49,12 +49,13 @@ var Cart = React.createClass({
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan="4" className="text-right">Total</td>
-                <td>GBP {total}</td>
+                <td colSpan="4" className="text-right"><h4>Total</h4></td>
+                <td><h4>GBP {total}</h4></td>
               </tr>
             </tfoot>
           </table>
           <Link href="/">Continue Shopping</Link>
+          <Link className="btn btn-primary btn-lg pull-right" href="/checkout">Checkout</Link>
         </div>
     )
   }

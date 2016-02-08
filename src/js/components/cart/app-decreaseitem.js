@@ -6,7 +6,7 @@ var DecreaseItem = React.createClass({
     AppActions.decreaseItem(this.props.index)
   },
   render:function(){
-    return <button onClick={this.handler}>-</button>
+    return <button onClick={this.handler}><img className="inc-dec" src="../../assets/products/minus.png" /></button>
   }
 });
 

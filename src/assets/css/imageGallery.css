@@ -16,6 +16,7 @@
   content: ''; }
 body {
   background-image: url("../products/carbon.jpg") !important;
+    padding-bottom: 30px;
 }
 /********************************************
 	ICON SET DOWNLOADED FROM FONT ELLO
@@ -82,3 +83,33 @@ body {
     display: inline-block; }
   .image-gallery .carousel .thumb {
     width: 120px; }
+
+  .col-sm-3 img, .table.table-hover img {
+    height:214px;
+  }
+.bs-callout-warning {
+  border-left-color: #aa6708 !important;
+}
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1em solid #eee;
+  border-left-width: 9px;
+  border-radius: 3px;
+}
+.col-sm-3 .price, .product-detail .price {
+  margin-top: 10px;
+  font-weight: bold;
+}
+  .product-detail img{
+    max-height: 350px;
+  }
+.product-detail .price {
+  font-size: 2em;
+}
+.col-sm-2.col-sm-push-3 {
+  padding-top:30px;
+}
+img.inc-dec {
+    height: 2em !important;
+}

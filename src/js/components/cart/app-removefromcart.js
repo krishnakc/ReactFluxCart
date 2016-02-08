@@ -6,7 +6,7 @@ var RemoveFromCart = React.createClass({
     AppActions.removeItem(this.props.index)
   },
   render:function(){
-    return <button onClick={this.handler}>x</button>
+    return <button onClick={this.handler}><img className="inc-dec" src="../../assets/products/remove-hi.png" /></button>
   }
 });
 
