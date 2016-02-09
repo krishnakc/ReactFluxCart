@@ -33,7 +33,7 @@ var Cart = React.createClass({
     })
     return (
       <div>
-      <table className="table table-hover">
+      <table className="table table-hover cart-table">
           <thead>
               <tr>
                 <th></th>
@@ -50,12 +50,14 @@ var Cart = React.createClass({
             <tfoot>
               <tr>
                 <td colSpan="4" className="text-right"><h4>Total</h4></td>
-                <td><h4>GBP {total}</h4></td>
+                <td> <h4>GBP {total}</h4></td>
               </tr>
             </tfoot>
           </table>
           <Link href="/">Continue Shopping</Link>
-          <Link className="btn btn-primary btn-lg pull-right" href="/checkout">Checkout</Link>
+          <div>
+              {total > 0 ?<Link className="btn btn-primary btn-lg pull-right" href="/checkout">Checkout</Link> : ""}
+          </div>
         </div>
     )
   }

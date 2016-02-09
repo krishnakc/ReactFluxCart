@@ -16,7 +16,12 @@ function _removeItem(index){
 }
 
 function _increaseItem(index){
-  _cartItems[index].qty++;
+  if(_cartItems[index].qty < _cartItems[index].available) {
+    _cartItems[index].qty++;
+  } else {
+      alert("We regret :( Stock not available.., suggest to you come back after some time ");
+  }
+
 }
 
 function _decreaseItem(index){
@@ -30,8 +35,8 @@ function _decreaseItem(index){
 
 function _addItem(item){
   if(!item.inCart){
-    item['qty'] = 1;
-    item['inCart'] = true;
+    item.qty = 1;
+    item.inCart = true;
     _cartItems.push(item);
   }
   else {

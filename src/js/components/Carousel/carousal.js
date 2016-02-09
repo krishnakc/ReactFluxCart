@@ -20,24 +20,24 @@ var CCarousel = React.createClass({
 
                     <div>
                         <img src="../assets/carousal-images/1.jpeg" />
-                        <p className="legend">Product Category 1</p>
+                        <Link href="/cart"> <p className="legend">Mobiles</p></Link>
                     </div>
 
                 <div>
                     <img src="../assets/carousal-images/2.jpeg" />
-                    <p className="legend">Product Category  2</p>
+                    <p className="legend">Fresh Fruits and Vegetables</p>
                 </div>
                 <div>
                     <img src="../assets/carousal-images/3.jpeg" />
-                    <p className="legend">Product Category 3</p>
+                    <p className="legend">Premium Clothing</p>
                 </div>
                 <div>
                     <img src="../assets/carousal-images/4.jpeg" />
-                    <p className="legend">Product Category 4</p>
+                    <p className="legend">Sceneries</p>
                 </div>
                 <div>
                     <img src="../assets/carousal-images/5.jpeg" />
-                    <p className="legend">Product Category 5</p>
+                    <p className="legend">Sceneries series 2</p>
                 </div>
             </Carousel>
         );
